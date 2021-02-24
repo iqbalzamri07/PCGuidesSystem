@@ -1,0 +1,90 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css?family=Passion+One');
+html, body{
+	background: #333;
+	font-family: Arial;
+}
+
+.menu {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+.main-menu {
+  background: #000000;
+  background-image: url('pcImages.jpg');
+  background-size: 100% 100%;
+  margin: 10px;
+  padding: 3px;
+  
+}
+
+.menu .menu-item {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+}
+
+.main-menu .menu-item a {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  font-family: 'Passion One', Arial, sans-serif;
+  font-smoothing: antialiased;
+  text-transform: uppercase;
+  overflow: visible;
+  line-height: 20px;
+  font-size: 24px;
+  background: #000;
+ 
+}
+
+
+.three-d span,
+.three-d span::before,
+.three-d span::after{  
+  display: block;
+  transition: all .3s ease-out;
+  transform-style: preserve-3d;
+}
+
+.three-d {
+  position: relative;
+  cursor: pointer;
+  transition: all .07s linear;
+}
+.three-d span{
+  display: block;
+  padding: 15px 10px;
+  perspective: -200px;
+}
+
+.three-d span::before, .three-d span::after {
+  padding: 15px 10px;
+  content: attr(title);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  box-sizing: border-box;
+}
+
+.three-d span::before {
+  transform: rotateX(0deg) translateZ(25px);
+}
+
+.three-d span::after {
+  transform: rotateX(-90deg) translateZ(25px);
+  background: #FFB82B;
+  color: #000;
+}
+
+.three-d:hover span, 
+.three-d:focus span{
+  transform: translateZ(-25px) rotateX(90deg);
+}
